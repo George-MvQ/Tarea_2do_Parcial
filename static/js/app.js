@@ -8,8 +8,14 @@ const btnCalcularVelocidaMRU = document.getElementById('btnCalcularVelocidadMRU'
 const tipoRespuesta = document.getElementById('tipoRespuestaMRU')
 const resultadoCalculado = document.getElementById('resultadoCalculoMRU')
 const imgRespuestaMRU = document.getElementById('imgRespuestaMRU')
+//PARA LO DE MRUV
+const tipoProblemaMRUV = document.getElementById('tipoProblemaMRUV');
+const formVelocidadInicial_snDis = document.getElementById('formVelocidadInicial_snDis')
+const formVelocidadFinal_snDis = document.getElementById('formVelocidadFinal_snDis')
+const formTiempo_snDis = document.getElementById('formTiempo_snDis')
+const formAceleracion_snDis = document.getElementById('formAceleracion_snDis')
 
-
+velocidadFields.style.display = 'none';
 tipoProblema.addEventListener('change', () => {
    // label.textContent = ''
     if (tipoProblema.value === 'distancia') {
@@ -26,6 +32,36 @@ tipoProblema.addEventListener('change', () => {
         velocidadFields.style.display = 'block'; // Mostrar campo de velocidad
     }
 });
+
+tipoProblemaMRUV.addEventListener('change',()=>{
+   switch (tipoProblemaMRUV.value){
+    case "velocidadInicial_snDis":
+        formVelocidadInicial_snDis.style.display = 'block';
+        formVelocidadFinal_snDis.style.display = 'none'
+        formTiempo_snDis.style.display = 'none'
+        formAceleracion_snDis.style.display = 'none'
+        break
+    case "velocidadFinal_snDis":
+        formVelocidadInicial_snDis.style.display = 'none';
+        formVelocidadFinal_snDis.style.display = 'block'
+        formTiempo_snDis.style.display = 'none'
+        formAceleracion_snDis.style.display = 'none'
+        break
+    case "tiempo_snDis":
+        formVelocidadInicial_snDis.style.display = 'none';
+        formVelocidadFinal_snDis.style.display = 'none'
+        formTiempo_snDis.style.display = 'block'
+        formAceleracion_snDis.style.display = 'none'
+        break
+    case "aceleracion_snDis":
+        formVelocidadInicial_snDis.style.display = 'none';
+        formVelocidadFinal_snDis.style.display = 'none'
+        formTiempo_snDis.style.display = 'none'
+        formAceleracion_snDis.style.display = 'block'
+        break
+
+   }
+})
 
 //calculando distrancia MRU
 btnCalcularDistanciaMRU.addEventListener('click', () => {

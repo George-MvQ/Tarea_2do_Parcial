@@ -101,6 +101,6 @@ select{
 }
 
 
-#distanciaFields, #tiempoFields, #velocidadFields {
+#tiempoFields, #velocidadFields, #formVelocidadFinal_snDis,#formTiempo_snDis,#formAceleracion_snDis {
     display: none;
 }

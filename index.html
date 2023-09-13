@@ -125,8 +125,84 @@
 <br>
         <section id="mruv">
             <h2>Movimiento Rectilineao Uniforme (MRU)</h2>
-            <article>
+            <article class="sec_formulario">
+                <div class="container formulario">
+                    <h3>Resolver Problemas de MRUV</h3>
+                    <label for="tipoProblema">Selecciona el problema a resolver:</label>
+                    <select id="tipoProblemaMRUV">
+                        <option value="velocidadInicial_snDis">Encontrar Velocidad inicial</option>
+                        <option value="velocidadFinal_snDis">Encontrar Velocidad final</option>
+                        <option value="tiempo_snDis">Encontrar Tiempo</option>
+                        <option value="aceleracion_snDis">Encontrar Aceleración</option>
+                    </select>
+                    <!--(m/s²)-->
 
+                    <!--Calculo de la velocidad inicial sin distancia -->
+                    <form id="formVelocidadInicial_snDis">
+                        <label for="vo_velocidadFinal_snDis">Velocidad final:</label>
+                        <input type="number" id="vo_velocidadFinal_snDis" placeholder="Ingrese la velocidad final">
+
+                        <label for="vo_aceleracion_snDis">Tiempo inicial:</label>
+                        <input type="number" id="vo_aceleracion_snDis" placeholder="Ingrese la aceleracion"><br>
+                        
+                        <label for="vo_tiempo_snDis">Tiempo</label>
+                        <input id="vo_tiempo_snDis" type="number" placeholder="Ingrese valor de tiempo">
+
+                        <button type="button" onclick="">Calcular</button>
+                       
+
+                    </form>
+
+                    <!-- calculo de la velocidad final sin distancia-->
+                    <form id="formVelocidadFinal_snDis">
+                        <label for="vf_velocidadInicial_snDis">Velocidad inicial:</label>
+                        <input id="vf_velocidadInicial_snDis" type="number" placeholder="Ingrese velocidad inicial">
+
+                        <label for="vf_aceleracion_snDis">Acelearcion:</label>
+                        <input id="vf_aceleracion_snDis" type="number" placeholder="Ingrese aceleracion">
+
+                        <label for="vf_tiempo_snDis">Tiempo:</label>
+                        <input  type="number" id="vf_tiempo_snDis" placeholder="Ingrese tiempo">
+
+                        <button type="button" onclick="">Calcular</button>
+
+                    </form>
+
+                    <!-- Calculo del tiempo sin distancia-->
+                    <form id="formTiempo_snDis">
+                        <label for="t_velocidadFinal_snDis">Velocidad final:</label>
+                        <input id="t_velocidadFinal_snDis" type="number" placeholder="Ingrese velociada final">
+
+
+                        <label for="t_velocidadInicial_snDis">Velocidad inicial</label>
+                        <input id="t_velocidadInicial"type="number" placeholder="ingrese velocidad Inicial">
+
+                        <label for="t_aceleracion_snDis">Aceleracion</label>
+                        <input id="t_aceleracion_snDis"type="number" placeholder="Ingrese la aceleracion">
+
+                        <button type="button" onclick="">Calcular</button>
+
+                    </form>
+
+                    <!-- Calculo de la Aceleracion sin distancia -->
+                    <form  id="formAceleracion_snDis">
+                        <label for="a_velocidadFinal_snDis">Velocidad final:</label>
+                        <input id="a_velocidadFinal_snDis" type="number" placeholder="Ingrese velocidad Final">
+
+                        <label for="">Velocidad inicial:</label>
+                        <input id="a_velocidadInicial_snDis" type="number" placeholder="Ingerse velocidad inicial">
+
+                        <label for="a_tiepo_snDis">Tiempo:</label>
+                        <input id="a_tiepo_snDis" type="number" placeholder="Ingrese tiempo">
+
+                        <button type="button" onclick="">Calcular</button>
+
+                    </form>
+
+                </div>
+                <div class="container form_respuesta">
+
+                </div>
             </article>
             <article>
 
