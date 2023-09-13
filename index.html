@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/style.css">
+    <title>Problemas de MRU</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>Pagina de MRU y MRUV</h1>
+    </header>
+    <nav>
+
+    </nav>
+    <main>
+        <section id="mru">
+            <h2>Movimiento Rectilineao Uniforme (MRU)</h2>
+
+            <p class="p_instruccionFrm">En este apartao progra seleccionar el tipo de problema a resolver
+                seleccione segun lo necesite entre encontrar distancia, tiempo o velocidad, posteriormente <br>
+                ingrese los datos que se le soliciten:
+            </p>
+            <!--Formulario-->
+            <article class="sec_formulario">
+
+                <div class="container formulario">
+                    <h3>Resolver Problemas de MRU</h3>
+                    <label for="tipoProblema">Selecciona el problema a resolver:</label>
+                    <select id="tipoProblema">
+                        <option value="distancia">Encontrar Distancia</option>
+                        <option value="tiempo">Encontrar Tiempo</option>
+                        <option value="velocidad">Encontrar Velocidad</option>
+                        <!-- Nueva opción -->
+                    </select>
+
+                    <form id="distanciaFields">
+                        <label for="velocidadDistancia">Velocidad (m/s):</label>
+                        <input type="number" id="velocidadDistancia" placeholder="Ingrese la velocidad">
+
+                        <label for="tiempoDistancia">Tiempo (s):</label>
+                        <input type="number" id="tiempoDistancia" placeholder="Ingrese el tiempo"><br>
+                        <button type="button" id="btnCalcularDistancia"> Calcular Distancia</button>
+
+                    </form>
+
+                    <form id="tiempoFields">
+                        <label for="distanciaTiempo">Distancia (m):</label>
+                        <input type="number" id="distanciaTiempo" placeholder="Ingrese la distancia">
+
+                        <label for="velocidadTiempo">Velocidad (m/s):</label>
+                        <input type="number" id="velocidadTiempo" placeholder="Ingrese la velocidad"><br>
+                        <button id="btnCalcularTiempoMRU" type="button">Calcular tiempo</button>
+                        <label id="respuestaTiempoMRU">respuesta: </label>
+                    </form>
+
+                    <form id="velocidadMRU">
+                        <label for="distanciaVelocidad">Distancia (m):</label>
+                        <input type="number" id="distanciaVelocidad" placeholder="Ingrese la distancia">
+
+                        <label for="tiempoVelocidad">Tiempo (s):</label>
+                        <input type="number" id="tiempoVelocidad" placeholder="Ingrese el tiempo"><br>
+                        <button id="btnCalcularVelocidadMRU" type="button">Calcular velocidad</button>
+                        <label id="respuestaVelocidadMRU">respuesta: </label>
+                    </form>
+                </div>
+
+                <div class="container form_respuesta">
+                    <h3 class="titulo_h3">RESPUESTA</h3>
+                    <p><span id="tipoRespuestaMRU" class="tpRespuesta respuesta"></span> <span id="resultadoCalculoMRU"
+                            class="rsCalculado respuesta"></span></p>
+                    <img id="imgRespuestaMRU" src="" alt="">
+                </div>
+
+            </article>
+            <br>
+            <!--concepto-->
+            <article id="mruInfo">
+                <div class="container">
+                    <h3> Conceptos importantes sonbre movimiento rectilíneo Uniforme (MRU)</h3>
+                    <p>
+                        El MRU, o Movimiento Rectilíneo Uniforme, es un concepto fundamental en la física que describe
+                        el movimiento de un objeto a lo largo de una línea recta con una velocidad constante. En otras
+                        palabras, en un MRU, un objeto se desplaza en una dirección específica a una velocidad
+                        constante, lo que significa que su velocidad no cambia con el tiempo y su trayectoria es una
+                        línea recta. El MRU es uno de los tipos más simples de movimiento y se caracteriza por la
+                        ausencia de aceleración. Esto significa que la velocidad del objeto no solo tiene una magnitud
+                        constante, sino que también tiene la misma dirección a lo largo de todo el movimiento.
+                    </p>
+                    <p>Así como las matemáticas, la cinemática también puede ser calculada a través de una calculadora
+                        de física. Por tanto, puedes calcular la velocidad, distancia o el tiempo sin ningún problema.
+                    </p>
+                    <ul>
+                        <li>
+                            <p> El MRU puede desplazarse hacia adelante o hacia atrás y por tanto la velocidad de un
+                                objeto puede ser negativa cuando se dirige en su dirección contraria.</p>
+                        </li>
+                        <li>
+                            <p>
+                                Un ejemplo claro del movimiento rectilíneo puede ser la trayectoria de una bala que se
+                                dispara. Toda trayectoria que sea recta, es MRU.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                En el MRU existen tres variables (distancia, tiempo, velocidad) y se emplean formulas
+                                para poder calcularlas, las cuales, son las siguientes:
+                            </p>
+                        </li>
+                    </ul>
+                    <p>Fórmula para hallar la distancia en MRU: Distancia = Tiempo * Velocidad </p>
+
+                    <p>Fórmula para hallar la velocidad en MRU:
+                        Velocidad = Distancia / Tiempo</p>
+
+                    <p>Fórmula para hallar el tiempo en MRU:
+                        Tiempo = Distancia / Velocidad</p>
+
+                </div>
+            </article>
+        </section>
+<br>
+        <section id="mruv">
+            <h2>Movimiento Rectilineao Uniforme (MRU)</h2>
+            <article>
+
+            </article>
+            <article>
+
+            </article>
+        </section>
+
+
+    </main>
+    <footer>
+        <p>Geroge Moises Vasquez Quiche</p>
+    </footer>
+    <script src="./static/js/app.js"></script>
+</body>
+
+</html>

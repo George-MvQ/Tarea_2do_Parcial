@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+main{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.sec_formulario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: stretch;
+    grid-column-gap: 10px;
+}
+
+.container{
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+.formulario{
+    margin-left: 4em;
+}
+
+.form_respuesta{
+    margin-right: 4em;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+select, input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+h1 {
+    text-align: center;
+    color: red
+}
+
+h2{
+    text-align: center;
+    color: blueviolet;
+}
+
+h3{
+    text-align: center;
+}
+/*H3 PERSONALIZADO*/
+.titulo_h3{
+    padding-bottom: 2%;
+    padding-top: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 150%;
+}
+
+.p_instruccionFrm{
+    text-align: center;
+}
+
+input{
+    width: 90%;
+  
+}
+
+select{
+    width: 94%;
+}
+
+/* para texto de respuesta en general */
+.respuesta{
+    font-weight: bold;
+    font-size: 124%;
+    text-align: center;
+}
+
+#resultadoCalculoMRU{
+    color: chocolate;
+    text-align: center;
+}
+
+/* para las imagnes de mru */
+#imgRespuestaMRU{
+    max-width: 100%;
+    height: auto;
+   
+}
+
+
+#distanciaFields, #tiempoFields, #velocidadFields {
+    display: none;
+}
