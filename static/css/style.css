@@ -1,11 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background: #F8F8F8;
 }
 
 main{
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 4em;
+    padding-right: 4em;
 }
 
 .sec_formulario{
@@ -48,7 +48,15 @@ select, input{
 
 h1 {
     text-align: center;
-    color: red
+    color: #FFEAA7;
+    margin-top: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+header{
+    background-color: #1F2029;
+    margin-top: 0px;
+    padding: 10px;
 }
 
 h2{
@@ -99,7 +107,6 @@ select{
     height: auto;
    
 }
-
 
 #tiempoFields, #velocidadFields, #formVelocidadFinal_snDis,#formTiempo_snDis,#formAceleracion_snDis {
     display: none;

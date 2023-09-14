@@ -14,6 +14,10 @@ const formVelocidadInicial_snDis = document.getElementById('formVelocidadInicial
 const formVelocidadFinal_snDis = document.getElementById('formVelocidadFinal_snDis')
 const formTiempo_snDis = document.getElementById('formTiempo_snDis')
 const formAceleracion_snDis = document.getElementById('formAceleracion_snDis')
+const tipoRespuestaMRUV = document.getElementById('tipoRespuestaMRUV')
+const resultadoCalculadoMRUV = document.getElementById('resultadoCalculoMRUV')
+const btCalcularTiempoSnDisMRUV = document.getElementById('btCalcularTiempoSnDisMRUV')
+const btCalcularAceleracionSnDisMRUV = document.getElementById('btCalcularAceleracionSnDisMRUV')
 
 velocidadFields.style.display = 'none';
 tipoProblema.addEventListener('change', () => {
@@ -93,6 +97,43 @@ btnCalcularVelocidaMRU.addEventListener('click', () => {
   
 });
 
+//funciones normales 
+//calcular velocidad inicial mruv
+function calcularVoMRUV(){
+    const vf = document.getElementById('vo_velocidadFinal_snDis').value
+    const a = document.getElementById('vo_aceleracion_snDis').value
+    const t = document.getElementById('vo_tiempo_snDis').value
+    respuesta('LA VELOCIDAD INICIAL ES: ',vf-(a*t), 'm/s' )
+}
+
+//funciones normales 
+//calcular velocidad final mruv
+function calcularVfMRUV(){
+    const vo = document.getElementById('vf_velocidadInicial_snDis').value
+    const a = document.getElementById('vf_aceleracion_snDis').value
+    const t = document.getElementById('vf_tiempo_snDis').value
+    respuesta('LA VELOCIDAD FINAL ES: ', vo+(a*t), 'm/s' )
+}
+
+//Calcular tiempo
+btCalcularTiempoSnDisMRUV.addEventListener('click', ()=>{
+    const vo = document.getElementById('t_velocidadInicial_snDis').value
+    const a = document.getElementById('t_aceleracion_snDis').value
+    const vf = document.getElementById('t_velocidadFinal_snDis').value
+    console.log(vo,a,vf);
+    respuesta('EL TIEMPO ES: ', (vf-vo)/a, 's' )
+}) 
+
+
+btCalcularAceleracionSnDisMRUV.addEventListener('click',()=>{
+    const vo = document.getElementById('a_velocidadInicial_snDis').value
+    const t = document.getElementById('a_tiepo_snDis').value
+    const vf = document.getElementById('a_velocidadFinal_snDis').value
+    respuesta('LA ACELERACION ES: ', (vf-vo)/t, 'm/s2' )
+})
+
+//funciones flecha 
+
 function redondeo(valor) {
     const residuo = valor - (Math.round(valor))
     if (residuo === 0) {
@@ -103,6 +144,10 @@ function redondeo(valor) {
     }
 }
 
+function respuesta(mensaje, respuesta,tipoMedida){
+    tipoRespuestaMRUV.textContent = mensaje
+    resultadoCalculadoMRUV.textContent = `${redondeo(respuesta)} ${tipoMedida}`
+}
 
 
 
