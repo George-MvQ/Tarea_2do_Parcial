@@ -8,6 +8,7 @@ const btnCalcularVelocidaMRU = document.getElementById('btnCalcularVelocidadMRU'
 const tipoRespuesta = document.getElementById('tipoRespuestaMRU')
 const resultadoCalculado = document.getElementById('resultadoCalculoMRU')
 const imgRespuestaMRU = document.getElementById('imgRespuestaMRU')
+const spn_mensaje_respuesta = document.getElementById('mensaje-respuesta')
 //PARA LO DE MRUV
 const tipoProblemaMRUV = document.getElementById('tipoProblemaMRUV');
 const formVelocidadInicial_snDis = document.getElementById('formVelocidadInicial_snDis')
@@ -18,7 +19,7 @@ const tipoRespuestaMRUV = document.getElementById('tipoRespuestaMRUV')
 const resultadoCalculadoMRUV = document.getElementById('resultadoCalculoMRUV')
 const btCalcularTiempoSnDisMRUV = document.getElementById('btCalcularTiempoSnDisMRUV')
 const btCalcularAceleracionSnDisMRUV = document.getElementById('btCalcularAceleracionSnDisMRUV')
-
+const mensaje_respuestaMRUV = document.getElementById("mensaje-respuestaMRUV")
 velocidadFields.style.display = 'none';
 tipoProblema.addEventListener('change', () => {
    // label.textContent = ''
@@ -69,6 +70,7 @@ tipoProblemaMRUV.addEventListener('change',()=>{
 
 //calculando distrancia MRU
 btnCalcularDistanciaMRU.addEventListener('click', () => {
+    spn_mensaje_respuesta.style.display='none'
     const tiempo = document.getElementById('tiempoDistancia').value
     const velocidad = document.getElementById('velocidadDistancia').value
     tipoRespuesta.textContent = 'LA DISTANCIA ES:'
@@ -79,6 +81,7 @@ btnCalcularDistanciaMRU.addEventListener('click', () => {
 
 //calculando tiempo MRU
 btnCalcularTiempoMRU.addEventListener('click', () => {
+    spn_mensaje_respuesta.style.display='none'
     const distancia = document.getElementById('distanciaTiempo').value
     const velocidad = document.getElementById('velocidadTiempo').value
     tipoRespuesta.textContent = 'EL TIEMPO ES:'
@@ -88,6 +91,7 @@ btnCalcularTiempoMRU.addEventListener('click', () => {
 
 //calculando velocidad MRU
 btnCalcularVelocidaMRU.addEventListener('click', () => {
+    spn_mensaje_respuesta.style.display='none'
     const tiempo = document.getElementById('tiempoVelocidad').value
     const distancia = document.getElementById('distanciaVelocidad').value
     tipoRespuesta.textContent = 'LA VELOCIDAD ES:'
@@ -103,12 +107,14 @@ function calcularVoMRUV(){
     const vf = document.getElementById('vo_velocidadFinal_snDis').value
     const a = document.getElementById('vo_aceleracion_snDis').value
     const t = document.getElementById('vo_tiempo_snDis').value
+    mensaje_respuestaMRUV.style.display = 'none'
     respuesta('LA VELOCIDAD INICIAL ES: ',vf-(a*t), 'm/s' )
 }
 
 //funciones normales 
 //calcular velocidad final mruv
 function calcularVfMRUV(){
+    mensaje_respuestaMRUV.style.display = 'none'
     const vo = document.getElementById('vf_velocidadInicial_snDis').value
     const a = document.getElementById('vf_aceleracion_snDis').value
     const t = document.getElementById('vf_tiempo_snDis').value
@@ -117,6 +123,7 @@ function calcularVfMRUV(){
 
 //Calcular tiempo
 btCalcularTiempoSnDisMRUV.addEventListener('click', ()=>{
+    mensaje_respuestaMRUV.style.display = 'none'
     const vo = document.getElementById('t_velocidadInicial_snDis').value
     const a = document.getElementById('t_aceleracion_snDis').value
     const vf = document.getElementById('t_velocidadFinal_snDis').value
@@ -126,6 +133,7 @@ btCalcularTiempoSnDisMRUV.addEventListener('click', ()=>{
 
 
 btCalcularAceleracionSnDisMRUV.addEventListener('click',()=>{
+    mensaje_respuestaMRUV.style.display = 'none'
     const vo = document.getElementById('a_velocidadInicial_snDis').value
     const t = document.getElementById('a_tiepo_snDis').value
     const vf = document.getElementById('a_velocidadFinal_snDis').value
@@ -143,6 +151,7 @@ function redondeo(valor) {
         return valor.toFixed(2)
     }
 }
+
 
 function respuesta(mensaje, respuesta,tipoMedida){
     tipoRespuestaMRUV.textContent = mensaje
