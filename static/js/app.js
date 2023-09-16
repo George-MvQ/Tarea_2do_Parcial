@@ -75,7 +75,7 @@ btnCalcularDistanciaMRU.addEventListener('click', () => {
     const velocidad = document.getElementById('velocidadDistancia').value
     tipoRespuesta.textContent = 'LA DISTANCIA ES:'
     resultadoCalculado.textContent = `${redondeo(velocidad * tiempo)}m`
-    imgRespuestaMRU.src = '../../media/images/distanciaMRU.png'
+    imgRespuestaMRU.src = './../../media/images/distanciaMRU.png'
 
 });
 
@@ -86,7 +86,7 @@ btnCalcularTiempoMRU.addEventListener('click', () => {
     const velocidad = document.getElementById('velocidadTiempo').value
     tipoRespuesta.textContent = 'EL TIEMPO ES:'
     resultadoCalculado.textContent = `${redondeo(distancia / velocidad)} s`
-    imgRespuestaMRU.src = '../../media/images/tiempoMRU.png'
+    imgRespuestaMRU.src = './../../media/images/tiempoMRU.png'
 });
 
 //calculando velocidad MRU
@@ -96,7 +96,7 @@ btnCalcularVelocidaMRU.addEventListener('click', () => {
     const distancia = document.getElementById('distanciaVelocidad').value
     tipoRespuesta.textContent = 'LA VELOCIDAD ES:'
     resultadoCalculado.textContent = `${redondeo(distancia / tiempo)} m/s`
-    imgRespuestaMRU.src='../../media/images/velocidadMRU.png'
+    imgRespuestaMRU.src='./../../media/images/velocidadMRU.png'
 
   
 });
